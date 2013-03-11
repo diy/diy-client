@@ -1,6 +1,8 @@
 ## diy
 #### Minimalist [streaming](http://nodejs.org/api/stream.html) API client for DIY
 
+[![Build Status](https://travis-ci.org/diy/diy-client.png?branch=master)](https://travis-ci.org/diy/diy-client)
+
 ### Installation
 ```bash
 npm install diy
