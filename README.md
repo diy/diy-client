@@ -22,7 +22,7 @@ request.on('error', function (err) {
 ```
 
 ### Request Proxy
-One common question has been how to integrate calls to the DIY API with 3rd party Node.js servers. The easiest way to do this is to simply proxy requests to the DIY API and then pipe the response. For example, here is a simple HTTP server that will forward all requests to:
+One common question has been how to integrate calls to the DIY API with 3rd party Node.js servers. The easiest way to do this is to simply proxy requests to the DIY API and then pipe the response. For example, here is a simple (read: incomplete) HTTP server that will forward all requests to the API client and then pipe the response:
 
 ```javascript
 var http    = require('http'),
