@@ -21,6 +21,6 @@ var client  = diy('APIKEY', '*');
  */
 test('interface', function (t) {
     t.type(diy, 'function', 'module should be a function');
-    t.type(client, 'object', 'client should be an object');
+    t.type(client, 'function', 'client should be a function');
     t.end();
 });
