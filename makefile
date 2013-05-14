@@ -1,7 +1,6 @@
-generator:
-	npm install
-	git init
-	git add -A
-	git remote add origin https://thisandagain@github.com/thisandagain/diy
+test:
+	tap ./test/governance/*.js
+	tap ./test/unit/*.js
+	tap ./test/integration/*.js
 
-.PHONY: generator
+.PHONY: test
