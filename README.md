@@ -36,6 +36,19 @@ http.createServer(function (req, res) {
 }).listen(80);
 ```
 
+### Callback Pattern
+Optionally you can use a request-ish callback pattern should streams be a good fit for your implementation:
+
+```javascript
+var diy    = require('diy')('YOURAPIKEY', '*');
+diy({
+    method: 'GET',
+    uri:    '/status'
+}, function (err, body) {
+    // Do stuff
+});
+```
+
 ### Testing
 ```bash
 npm test
