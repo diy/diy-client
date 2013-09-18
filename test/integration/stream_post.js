@@ -1,5 +1,5 @@
 var test    = require('tap').test,
-    diy     = require('../../lib/index')('DIY_TEST_KEY', '*');
+    diy     = require('../../lib/index')('*');
 
 var buffer = '';
 var req = diy({

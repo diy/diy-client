@@ -2,7 +2,7 @@ var test    = require('tap').test;
 
 // Setup
 var diy     = require('../../lib/index');
-var client  = diy('APIKEY', '*');
+var client  = diy('*');
 
 // Asset
 test('unit', function (t) {
