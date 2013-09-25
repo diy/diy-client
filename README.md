@@ -10,7 +10,7 @@ npm install diy
 
 ### Basic Use
 ```javascript
-var diy    = require('diy')('YOURAPIKEY', '*');
+var diy    = require('diy')('*');
 var request = diy({
     method: 'GET',
     uri:    '/status'
@@ -26,7 +26,7 @@ One common question has been how to integrate calls to the DIY API with 3rd part
 
 ```javascript
 var http    = require('http'),
-    diy     = require('diy')('YOURAPIKEY', '*');
+    diy     = require('diy')('*');
 
 http.createServer(function (req, res) {
     diy({
