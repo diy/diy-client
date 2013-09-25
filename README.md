@@ -40,7 +40,7 @@ http.createServer(function (req, res) {
 Optionally you can use a request-ish callback pattern should streams be a good fit for your implementation:
 
 ```javascript
-var diy    = require('diy')('YOURAPIKEY', '*');
+var diy    = require('diy')('*');
 diy({
     method: 'GET',
     uri:    '/status'
