@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="application/javascript" src="diy-client.js"></script>
+    <script type="application/javascript">
+        var diy = require('diy-client')();
+        
+        diy({
+            uri: '/status'
+        }, function (err, obj) {
+            console.log(obj.response);
+        });
+    </script>
+
+</body>
+</html>

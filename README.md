@@ -49,6 +49,18 @@ diy({
 });
 ```
 
+### Browserify
+
+`diy-client` can be used via browserify. Currently only the callback pattern is supported 
+and it uses jQuery to make the request. Just `var diy = require('diy-client')();` in your clientside script.
+
+To run a clientside example:
+
+```bash
+npm start
+```
+
+
 ### Testing
 ```bash
 npm test
