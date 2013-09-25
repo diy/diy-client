@@ -11,7 +11,7 @@
   "main": "./lib/index.js",
   "browser": "./lib/browser.js",
   "scripts": {
-    "start": "beefy ../lib/index.js:diy-client.js --cwd ./examples -- -r ./lib/index.js:diy-client",
+    "start": "./node_modules/.bin/beefy ../lib/index.js:diy.js --cwd ./examples -- -r ./lib/index.js:diy",
     "test": "make test"
   },
   "dependencies": {
