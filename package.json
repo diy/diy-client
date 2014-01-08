@@ -2,7 +2,7 @@
   "author": "Andrew Sliwinski <andrew@diy.org> (https://diy.org)",
   "name": "diy",
   "description": "Streaming API client for DIY",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/diy/diy-client",
   "repository": {
     "type": "git",
