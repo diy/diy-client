@@ -1,4 +1,4 @@
-var test    = require('tap').test,
+var test    = require('tape'),
     diy     = require('../../lib/index')('*');
 
 diy({
@@ -10,9 +10,10 @@ diy({
 }, function (err, body) {
     console.dir(body);
     test('integration', function (t) {
+        t.plan(3);
+
         t.equal(err, null, 'errors should be null');
-        t.type(body, 'object', 'response body should be an object');
-        t.equal(body.response.foo, 'bar', 'included expected response');
-        t.end();
+        t.equal(typeof body, 'object', 'response body should be an object');
+        t.equal(body.response.error, 'Method Not Allowed', 'included expected response');
     });
 });

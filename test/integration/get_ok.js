@@ -1,13 +1,14 @@
-var test    = require('tap').test,
+var test    = require('tape'),
     diy     = require('../../lib/index')('*');
 
 diy({
     method: 'GET',
-    uri:    '/status'
+    uri:    '/explore/featured'
 }, function (err, body) {
+    console.dir(body);
     test('integration', function (t) {
+        t.plan(2);
         t.equal(err, null, 'errors should be null');
-        t.type(body, 'object', 'response body should be an object');
-        t.end();
+        t.equal(typeof body, 'object', 'response body should be an object');
     });
 });
