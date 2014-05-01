@@ -8,12 +8,10 @@ diy({
         foo: 'bar'
     }
 }, function (err, body) {
-    console.dir(body);
-    test('integration', function (t) {
-        t.plan(3);
-
+    test('HTTP POST w/ error', function (t) {
         t.equal(err, null, 'errors should be null');
         t.equal(typeof body, 'object', 'response body should be an object');
         t.equal(body.response.error, 'Method Not Allowed', 'included expected response');
+        t.end();
     });
 });

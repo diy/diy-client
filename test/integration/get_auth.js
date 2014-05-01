@@ -6,10 +6,9 @@ diy({
     uri:    '/explore/featured',
     auth:   'username:password'
 }, function (err, body) {
-    console.dir(body);
-    test('integration', function (t) {
-        t.plan(2);
+    test('HTTP GET w/ Basic Auth', function (t) {
         t.equal(err, null, 'errors should be null');
         t.equal(typeof body, 'object', 'response body should be an object');
+        t.end();
     });
 });
