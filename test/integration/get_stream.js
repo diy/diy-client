@@ -8,6 +8,11 @@ var req = diy({
 });
 
 test('HTTP GET w/ Stream', function (t) {
+    if (typeof window !== 'undefined') {
+        t.equal(true, true, 'streaming not supported in browsers')
+        return t.end();
+    }
+
     req.on('data', function (data) {
         buffer += data.toString();
     });
