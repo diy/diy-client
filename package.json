@@ -22,7 +22,9 @@
   "devDependencies": {
     "browserify": "^3.44.2",
     "jshint": "~2.5.0",
-    "tape": "~2.12.3"
+    "mocha": "^1.18.2",
+    "tape": "~2.12.3",
+    "zuul": "^1.6.4"
   },
   "optionalDependencies": {},
   "engines": {
