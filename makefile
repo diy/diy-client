@@ -1,4 +1,3 @@
-BROWSERIFY = ./node_modules/.bin/browserify
 JSHINT = ./node_modules/.bin/jshint
 TAP = ./node_modules/.bin/tape
 
@@ -16,7 +15,4 @@ test:
 	@make lint
 	@make unit
 
-build:
-	$(BROWSERIFY) -a 'request:xhr' ./test/integration/*.js > ./test/fixtures/test.js
-
-.PHONY: lint unit test build
+.PHONY: lint unit test
