@@ -1,6 +1,9 @@
 JSHINT = ./node_modules/.bin/jshint
 TAP = ./node_modules/.bin/tape
 
+dist: lib/index.js
+	browserify lib/index.js -s diyClient > diy.dist.js
+
 lint:
 	$(JSHINT) ./lib/*.js
 
