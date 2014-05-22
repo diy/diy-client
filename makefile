@@ -1,8 +1,9 @@
 JSHINT = ./node_modules/.bin/jshint
 TAP = ./node_modules/.bin/tape
+BROWSERIFY = ./node_modules/.bin/browserify
 
 dist: lib/index.js
-	browserify lib/index.js -s diyClient > diy.dist.js
+	$(BROWSERIFY) lib/index.js -s diyClient > diy.dist.js
 
 lint:
 	$(JSHINT) ./lib/*.js
@@ -18,4 +19,4 @@ test:
 	@make lint
 	@make unit
 
-.PHONY: lint unit test
+.PHONY: dist lint unit test

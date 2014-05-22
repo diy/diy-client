@@ -1,5 +1,4 @@
-(function(e){if("function"==typeof bootstrap)bootstrap("diyclient",e);else if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else if("undefined"!=typeof ses){if(!ses.ok())return;ses.makeDiyClient=e}else"undefined"!=typeof window?window.diyClient=e():global.diyClient=e()})(function(){var define,ses,bootstrap,module,exports;
-return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.diyClient=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 /**
  * Minimalist streaming API client for DIY
  *
@@ -10,7 +9,7 @@ return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requi
 /**
  * Dependencies
  */
-var request = require('request');
+var request = _dereq_('request');
 
 /**
  * Returns an API client with the user supplied API key and version target.
@@ -85,9 +84,9 @@ module.exports = function (version, host) {
         });
     };
 };
-},{"request":2}],2:[function(require,module,exports){
-var window = require("global/window")
-var once = require("once")
+},{"request":2}],2:[function(_dereq_,module,exports){
+var window = _dereq_("global/window")
+var once = _dereq_("once")
 
 var messages = {
     "0": "Internal XMLHttpRequest Error",
@@ -199,8 +198,9 @@ function createXHR(options, callback) {
 
 function noop() {}
 
-},{"global/window":3,"once":4}],3:[function(require,module,exports){
-var global=self;if (typeof window !== "undefined") {
+},{"global/window":3,"once":4}],3:[function(_dereq_,module,exports){
+(function (global){
+if (typeof window !== "undefined") {
     module.exports = window
 } else if (typeof global !== "undefined") {
     module.exports = global
@@ -208,7 +208,8 @@ var global=self;if (typeof window !== "undefined") {
     module.exports = {}
 }
 
-},{}],4:[function(require,module,exports){
+}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],4:[function(_dereq_,module,exports){
 module.exports = once
 
 once.proto = once(function () {
@@ -229,6 +230,6 @@ function once (fn) {
   }
 }
 
-},{}]},{},[1])(1)
+},{}]},{},[1])
+(1)
 });
-;
