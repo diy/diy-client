@@ -2,7 +2,7 @@
   "author": "Andrew Sliwinski <andrew@diy.org> (https://diy.org)",
   "name": "diy",
   "description": "API client for DIY.org",
-  "version": "1.1.0-alpha",
+  "version": "1.1.0",
   "homepage": "https://github.com/diy/diy-client",
   "repository": {
     "type": "git",
@@ -12,12 +12,12 @@
     "test": "make test"
   },
   "engines": {
-    "node": ">=0.8"
+    "node": ">=0.10"
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "request": "~2.34.0",
-    "xhr": "~1.5.0"
+    "request": "~2.40.0",
+    "xhr": "~1.15.0"
   },
   "devDependencies": {
     "jshint": "~2.5.0",
