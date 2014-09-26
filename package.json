@@ -21,7 +21,8 @@
   },
   "devDependencies": {
     "jshint": "~2.5.0",
-    "tape": "~2.12.3"
+    "tape": "~2.12.3",
+    "browserify": "~4.1.5"
   },
   "browser": {
     "request": "xhr"
